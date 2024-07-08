@@ -21,5 +21,3 @@ Spring에서 컨트롤러를 지정해주기 위한 Annotation 에는 @Controlle
 반환합니다, 주로 REST API를 개발할 때 사용되며 객체를 ResponseEntity로 감싸 반환합니다.
 
 ![controller2](https://github.com/TwoEther/study/assets/101616106/a5eab257-0448-47df-bdc6-57c7fe905072)
-
-
