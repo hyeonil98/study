@@ -20,6 +20,5 @@ public class PostController {
     private final CafeMemberJpaRepository cafeMemberJpaRepository;
     private final BoardJpaRepository boardJpaRepository;
     private final PostJpaRepository postJpaRepository;
-    private final PostRender postRender;
 
 }
