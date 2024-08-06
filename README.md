@@ -7,7 +7,9 @@
   * [Thread의 동작과 제어](https://github.com/TwoEther/study/blob/master/java/markdown/Java/Thread.md)
   * [Java 자료구조](https://github.com/TwoEther/study/blob/master/java/markdown/Java/collection.md)
   * [객체를 순환하는 자료구조 Stream](https://github.com/TwoEther/study/blob/master/java/markdown/Java/Stream.md)
-
+* 디자인 패턴
+  * 옵저버 패턴
+  * 데코레이터 패턴
 * 프로젝트
     * [카카오 페이 결제 API 적용기](https://github.com/TwoEther/study/blob/master/spring/Spring/kakaopay.md)
     * [Spring Security를 이용한 회원 가입 및 인증](https://github.com/TwoEther/study/blob/master/spring/Spring/security.md)
