@@ -8,7 +8,7 @@
   * [Java 자료구조](https://github.com/TwoEther/study/blob/master/java/markdown/Java/collection.md)
   * [객체를 순환하는 자료구조 Stream](https://github.com/TwoEther/study/blob/master/java/markdown/Java/Stream.md)
 * 디자인 패턴
-  * 옵저버 패턴
+  * [옵저버 패턴](https://github.com/TwoEther/study/tree/master/java/markdown/design)
   * 데코레이터 패턴
 * 프로젝트
     * [카카오 페이 결제 API 적용기](https://github.com/TwoEther/study/blob/master/spring/Spring/kakaopay.md)
