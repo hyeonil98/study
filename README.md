@@ -28,3 +28,4 @@
   * [데이터베이스 정규화](https://github.com/TwoEther/study/blob/master/cs/database/normalization.md)
   * [SQL 트랜잭션](https://github.com/TwoEther/study/blob/master/cs/database/sql.md)
   
+* 알고리즘
