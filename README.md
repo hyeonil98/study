@@ -26,7 +26,6 @@
   * [HTTP 동작원리](https://github.com/TwoEther/study/blob/master/cs/network/http.md)
 * DB
   * [데이터베이스 정규화](https://github.com/TwoEther/study/blob/master/cs/database/normalization.md)
-  * [SQL 트랜잭션](https://github.com/TwoEther/study/blob/master/cs/database/sql.md)
-  
+  * [SQL 트랜잭션](https://github.com/TwoEther/study/blob/master/cs/database/sql.md)  
 * 알고리즘
- * [코딩테스트](https://github.com/TwoEther/CodingTest)
+  * [코딩테스트](https://github.com/TwoEther/CodingTest)
