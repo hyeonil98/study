@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <button id="testBtn">클릭</button>
+        <form action="/register" method="post">
+            <input type="text" name="username" placeholder="Username"/>
+            <input type="password" name="password" placeholder="Password"/>
+            <button type="submit">Register</button>
+        </form>
+
+        <form action="">
+            <input type="text" id="searchInput" placeholder="검색어 입력">
+            <button type="submit">검색</button>
+        </form>
+    </div>
+
+    <div>
+        <form method="post">
+            <input type="file" id="fileUploadBtn" name="fileUploadBtn" placeholder="파일업로드">
+            <button type="submit">저장</button>
+        </form>
+    </div>
+    <p th:text="${#dates.format('2024.12.12', 'YYYY-mm-dd')}"></p>
+</body>
+</html>

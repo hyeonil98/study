@@ -1,0 +1,92 @@
+// 📁 public/index.html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>계정 관리</title>
+  <style>
+    button { margin: 0.5em; }
+    #statusMsg { margin-top: 1em; color: green; }
+  </style>
+</head>
+<body>
+<h1>마이페이지</h1>
+<button data-action="delete-account">계정 삭제</button>
+<button data-action="logout">로그아웃</button>
+<button data-action="ss"></button>
+<button data-action="toggle-notify" data-user-id="123">알림 설정 토글</button>
+<p id="statusMsg"></p>
+
+<script>
+  document.addEventListener("click", (e) => {
+    const el = e.target;
+    const action = el.dataset.action;
+    if (action) handleAction(action, el);
+  });
+
+  async function action(action, el) {
+    const actions = {
+      "delete-account" : async () => {
+        if (!confirm("정말 계정을 삭제하시겠습니까?")) return;
+        const res = await fetch("/api/account", { method: "DELETE" });
+        if (res.ok) {
+          alert("계정이 삭제되었습니다.");
+          window.location.href = "/goodbye";
+        } else {
+          alert("계정 삭제 실패");
+        }
+      }
+    }
+  }
+
+  async function handleAction(action, el) {
+    const actions = {
+      "delete-account": async () => {
+        if (!confirm("정말 계정을 삭제하시겠습니까?")) return;
+        const res = await fetch("/api/account", { method: "DELETE" });
+        if (res.ok) {
+          alert("계정이 삭제되었습니다.");
+          window.location.href = "/goodbye";
+        } else {
+          alert("계정 삭제 실패");
+        }
+      },
+
+      "logout": async () => {
+        const res = await fetch("/api/logout", { method: "POST" });
+        if (res.ok) {
+          window.location.href = "/login";
+        } else {
+          alert("로그아웃 실패");
+        }
+      },
+
+      "toggle-notify": async () => {
+        const userId = el.dataset.userId;
+        const res = await fetch(`/api/users/${userId}/toggle-notify`, {
+          method: "PATCH"
+        });
+
+        const msgEl = document.getElementById("statusMsg");
+        msgEl.textContent = res.ok ? "알림 설정이 변경되었습니다." : "변경 실패";
+        msgEl.style.color = res.ok ? "green" : "red";
+      },
+    };
+
+    if (actions[action]) {
+      try {
+        await actions[action]();
+      } catch (err) {
+        console.error("에러 발생:", err);
+        alert("예기치 못한 오류가 발생했습니다.");
+      }
+    }
+  }
+</script>
+</body>
+</html>
+
+
+import { handleAction } from './scripts/actions.js';
+
+
